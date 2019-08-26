@@ -491,6 +491,7 @@ export function emitEvent(m, str, ...args) {
 }
 
 export function loginErrorMessage(m, error, type) {
+  console.log('hello world', m, error, type );
   // NOTE: previous version of lock checked for status codes and, at
   // some point, if the status code was 401 it defaults to an
   // "invalid_user_password" error (actually the
