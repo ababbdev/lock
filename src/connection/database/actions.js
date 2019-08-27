@@ -139,6 +139,8 @@ function signUpError(id, error) {
 
 function autoLogInError(id, error) {
   swap(updateEntity, 'lock', id, m => {
+    console.log('autoLogInError id', id);
+
     const errorMessage = l.loginErrorMessage(m, error);
     if (hasScreen(m, 'login')) {
       return l.setSubmitting(setScreen(m, 'login'), false, errorMessage);

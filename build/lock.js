@@ -2,7 +2,7 @@
  * lock v11.16.0
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 8/26/2019, 8:23:16 PM
+ * Date: 2019-8-27 15:32:33
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -9374,6 +9374,8 @@ function signUpError(id, error) {
 
 function autoLogInError(id, error) {
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__store_index__["b" /* swap */])(__WEBPACK_IMPORTED_MODULE_1__store_index__["g" /* updateEntity */], 'lock', id, function (m) {
+    console.log('autoLogInError id', id);
+
     var errorMessage = __WEBPACK_IMPORTED_MODULE_4__core_index__["loginErrorMessage"](m, error);
     if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__index__["i" /* hasScreen */])(m, 'login')) {
       return __WEBPACK_IMPORTED_MODULE_4__core_index__["setSubmitting"](__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__index__["q" /* setScreen */])(m, 'login'), false, errorMessage);
