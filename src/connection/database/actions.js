@@ -98,6 +98,9 @@ function signUpSuccess(id, result, popupHandler) {
       options.popupHandler = popupHandler;
     }
 
+    console.log('id: ' + id);
+    console.log('options: ' + JSON.stringify(options));
+
     return webApi.logIn(id, options, l.auth.params(lock).toJS(), (error, ...args) => {
       if (error) {
         setTimeout(() => autoLogInError(id, error), 250);
